@@ -1,0 +1,16 @@
+ <app-ui-header001></app-ui-header001> 
+ <div>
+    <app-ui-nav001></app-ui-nav001> 
+    <img src="assets/img/logo01.svg">
+ </div>
+<div>
+    <app-ui-slider001 *ngIf="bannerList">
+        <div class="swiper-slide"   *ngFor="let item of bannerList; let i = index"> 
+             <!-- (click)="openBannerLink(item.link)"   -->
+             <div class="slider-inner" [style.background-image]="'url(' + item.img + ')'">
+            </div>
+        </div>
+    </app-ui-slider001>
+    <app-ui-map001></app-ui-map001>
+</div> 
+ <app-ui-footer001></app-ui-footer001>  
