@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'base/reset';
+@import 'style-import';
+@import 'base/device';
+@import 'base/print';
+@import 'style-global';  //全站元件樣式 eg. form, layout, btn..
+
+// import core theme
+// @import '~@neux/ui/theme/theme-all';
+// @import '~@neux/ui/theme/config-all';
+
+a{
+    cursor: pointer;
+}
+body{
+    line-height: normal;
+    overflow-x: hidden;
+}

@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UiNav001Component implements OnInit {
 
+  public isOpen: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
-
+handelHambuger(){
+  this.isOpen=!this.isOpen;
+}
 }

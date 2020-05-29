@@ -1,0 +1,85 @@
+@import 'style-import';
+$hambuger-size:40px;
+$hambuger-line-width:32px;
+$hambuger-line-height:1px;
+$hambuger-line-color:$color-pink-01;
+// $hambuger-line-color:$color-white;
+$hambuger-line-deg:45deg;
+$hambuger-line-magin:10px;
+
+.ui-nav001 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: $color-grey-03;
+
+    &_hambuger {
+        height: $hambuger-line-width;
+        width: $hambuger-line-width;
+
+        .hambuger_btn-block {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            margin: 0;
+
+            .btn-block_inner-btn {
+                background-color: $hambuger-line-color;
+                display: block;
+                height: $hambuger-line-height;
+                width: $hambuger-line-width;
+                -webkit-transition: all .3s ease;
+                transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                &::before {
+                    margin-top: $hambuger-line-magin;
+                }
+
+                &::after {
+                    margin-top: calc(#{$hambuger-line-magin} * 2);
+                }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    background-color: $hambuger-line-color;
+                    content: "";
+                    display: block;
+                    height: $hambuger-line-height;
+                    width: $hambuger-line-width;
+                    -webkit-transition: all .3s ease;
+                    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+            }
+        }
+    }
+
+    .hambuger-close {
+        .btn-block_inner-btn {
+            background-color: transparent;
+
+            &::before,
+            &::after {
+                -webkit-transform-origin: 0 50%;
+                -ms-transform-origin: 0 50%;
+                transform-origin: 0 50%;
+                width: $hambuger-line-width - 3px;
+            }
+
+            &::before {
+                margin-top: 0px; //back to top
+                -webkit-transform: rotate($hambuger-line-deg);
+                -ms-transform: rotate($hambuger-line-deg);
+                transform: rotate($hambuger-line-deg);
+            }
+
+            &::after {
+                -webkit-transform: rotate(-$hambuger-line-deg);
+                -ms-transform: rotate(-$hambuger-line-deg);
+                transform: rotate(-$hambuger-line-deg);
+            }
+        }
+    }
+}
