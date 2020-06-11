@@ -1,0 +1,170 @@
+@import "style-import";
+$card-content-line-clamp:3;
+
+.slider-inner {
+  height: 400px;
+}
+
+$arrow-pos:50px;
+$arrow-pos-mb:10px;
+$arrow-size:58px;
+$arrow-size-mb:31px;
+$pagination-bullets-size:15px;
+$pagination-bullets-size-mb:8px;
+$img-next-path:'~src/assets/img/icon-banner-btn-next.svg';
+$img-prev-path:'~src/assets/img/icon-banner-btn-prev.svg';
+
+.ui-slider001 {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+
+    .swiper-wrapper {
+      height: 100%;
+      list-style: none;
+    }
+
+    .swiper-pagination.swiper-pagination-bullets {
+      bottom: 65px;
+
+      @media(max-width: $screen-sm-than-pad) {
+        bottom: 30px;
+      }
+
+      .swiper-pagination-bullet {
+        background: $color-white;
+        display: inline-block;
+        opacity: 1;
+        width: $pagination-bullets-size;
+        height: $pagination-bullets-size;
+        box-shadow: $shadow-style1;
+        border-radius: 100%;
+        margin-left: 30px;
+        cursor: pointer;
+
+        @media(max-width: $screen-sm-than-nb) {
+          width: $pagination-bullets-size-mb;
+          height: $pagination-bullets-size-mb;
+          margin-left: 17px;
+        }
+
+        &:first-child {
+          margin: 0;
+        }
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $color-pink-01;
+      }
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+
+      width: $arrow-size;
+      height: $arrow-size;
+      background-size: cover;
+      background-repeat: no-repeat;
+      outline: none;
+
+      @media(max-width: $screen-sm-than-nb) {
+        width: $arrow-size-mb;
+        height: $arrow-size-mb;
+      }
+    }
+
+    .swiper-button-next {
+      right: $arrow-pos;
+      background-image: url($img-next-path);
+
+      @media(max-width: $screen-sm-than-nb) {
+        right: $arrow-pos-mb;
+      }
+    }
+
+    .swiper-button-prev {
+      left: $arrow-pos;
+      background-image: url($img-prev-path);
+
+      @media(max-width: $screen-sm-than-nb) {
+        left: $arrow-pos-mb;
+      }
+    }
+  }
+}
+
+.app-ui-block-text001 {
+  background-color: royalblue;
+  height: 400px;
+
+  .ui-block-text001 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+
+    &_card {
+      color: $color-white;
+      // display: inline-block;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      // margin: 0 auto;
+      // text-align: center;
+
+      // vertical-align: middle;
+
+      .card_title {
+        margin-bottom: 50px;
+        font-size: $font-size-h5;
+      }
+
+      .card_content {
+        // max-height: calc(#{$font-size-h7} * #{$card-content-line-clamp} * #{ $font-line-height-md});
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .content_text {
+          font-size: $font-size-h7;
+          @extend .word-limit-lineType;
+          -webkit-line-clamp: 3;
+          line-height: $font-line-height-md;
+        }
+
+        .content_img {
+          width: 100%;
+          // max-width: 100px;
+          height: 100px; //為了控制對其度
+          // background-color: pink;
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+          margin: 0 auto;
+
+          .card_img_size {
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}

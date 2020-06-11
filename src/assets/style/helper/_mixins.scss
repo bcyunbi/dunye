@@ -1,0 +1,18 @@
+//引入參數舉例說明
+//超過四字，從第四字開始... ：原字大小、5字的寬度
+//超過四個字，從第三字開始...：「原字大小」小一號、5字的寬度
+@mixin word-limit-width($font-size, $word-num) {
+    width:calc(#{$font-size} * #{$word-num});
+  }
+  
+  @mixin word-limit-max-width($font-size, $word-num) {
+    max-width:calc(#{$font-size} * #{$word-num});
+  }
+  
+  
+//   @mixin word-limit-line($line-num) {
+//     -webkit-line-clamp: $line-num;
+//   }
+  
+  
+  

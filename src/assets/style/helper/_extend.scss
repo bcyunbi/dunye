@@ -3,3 +3,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.word-limit-lineType{
+  display: -webkit-box;
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical !important;
+}

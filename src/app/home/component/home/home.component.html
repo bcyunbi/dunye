@@ -1,16 +1,69 @@
- <app-ui-header001></app-ui-header001> 
+ <app-ui-header001></app-ui-header001>
  <div>
-    <app-ui-nav001></app-ui-nav001> 
-    <img src="assets/img/logo01.svg">
+     <app-ui-nav001></app-ui-nav001>
+     <!-- <img src="assets/img/logo01.svg"> -->
  </div>
-<div>
-    <app-ui-slider001 *ngIf="bannerList">
-        <div class="swiper-slide"   *ngFor="let item of bannerList; let i = index"> 
-             <!-- (click)="openBannerLink(item.link)"   -->
-             <div class="slider-inner" [style.background-image]="'url(' + item.img + ')'">
-            </div>
-        </div>
-    </app-ui-slider001>
-    <app-ui-map001></app-ui-map001>
-</div> 
- <app-ui-footer001></app-ui-footer001>  
+ <div>
+     <!-- <img src={{bannerList.img}}> -->
+     <div>
+         <app-ui-slider001 *ngIf="bannerList!=null">
+             <div class="swiper-slide" *ngFor="let item of bannerList; let i = index">
+                 <div class="slider-inner" [style.background-image]="'url(' + item.img + ')'">
+                 </div>
+             </div>
+         </app-ui-slider001>
+
+     </div>
+     <div class="app-ui-block-text001">
+         <div class="ui-block-text001">
+             <ng-container *ngFor="let number of [0,1,2]">
+
+             <div class="ui-block-text001_card">
+                 <div class="card_title">標題標題標題</div>
+                 <div class="card_content">
+                     <div class="content_text">
+                         內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容
+                     </div>
+                     <div class="content_img">
+                         <div class="card_img_size">
+                             <img src="assets/img/hardware_w.svg">
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+
+             <!-- <div class="ui-block-text001_card">
+                 <div class="card_title">標題標題標題</div>
+                 <div class="card_content">內容內容內容內容內容
+                 </div>
+                 <div class="card_img">
+                     <div class="card_img_size">
+                         <img src="assets/img/globe_w.svg">
+                     </div>
+                 </div>
+             </div>
+             <div class="ui-block-text001_card">
+                 <div class="card_title">標題標題標題</div>
+                 <div class="card_content">內容內容內容內容內容
+                 </div>
+                 <div class="card_img">
+                     <div class="card_img_size">
+                         <img src="assets/img/rocket_w.svg">
+                     </div>
+                 </div>
+             </div> -->
+             </ng-container>
+         </div>
+     </div>
+
+     <div>
+         <div>
+             <div></div>
+             <div> </div>
+         </div>
+     </div>
+     <app-ui-map001></app-ui-map001>
+ </div>
+ <app-ui-footer001></app-ui-footer001>
+ <!-- (click)="openBannerLink(item.link)"   -->

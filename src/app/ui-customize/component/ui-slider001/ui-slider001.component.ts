@@ -18,6 +18,7 @@ export class UiSlider001Component implements OnInit {
       scrollbar: false,
       navigation: true,
       pagination: {
+        el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
       },

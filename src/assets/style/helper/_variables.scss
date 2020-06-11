@@ -63,7 +63,8 @@ sans-serif;
 $font-line-height: 28px;
 $letter-space-normal: 0.2px;
 $letter-space-lg: 0.3px;
-
+$font-line-height-md: 1.5;
+$font-line-height-lg: $font-line-height-md * 2;
 // 02-2 font base  when text sm : base = 16 ; text md : base = 18; text lg : base = 20
 $font-base-num: 16;
 $font-base-num-md: 18;
